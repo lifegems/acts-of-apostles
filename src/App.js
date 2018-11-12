@@ -1,25 +1,20 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import * as json from './timelines/acts-of-apostles';
+var TL = window.TL;
 
 class App extends Component {
+  timeline = {};
+
+  componentDidMount() {
+    console.log(json.default);
+    this.timeline = new TL.Timeline('timeline', json.default);
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <div id='timeline' className='timeline'></div>
       </div>
     );
   }

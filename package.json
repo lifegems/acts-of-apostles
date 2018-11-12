@@ -2,6 +2,7 @@
   "name": "acts-timeline",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://lifegems.github.io/acts-of-apostles",
   "dependencies": {
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
